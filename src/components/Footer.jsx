@@ -2,6 +2,7 @@ import React from 'react';
 import { content } from '../content';
 import { buildWhatsAppLink } from '../utils/whatsapp';
 import WhatsAppIcon from './WhatsAppIcon';
+import Icon from './Icon';
 
 export default function Footer() {
   const footerWhatsAppMsg = `Hello ${content.businessName}, I am contacting you from your website footer.`;
@@ -67,10 +68,59 @@ export default function Footer() {
             <p className="text-xs text-gray-400">
               Partnering on transportation, logistics, and hire-purchase financing ({content.partner.regNumber}).
             </p>
-            <div className="pt-2 text-xs text-gray-300 space-y-2">
-              <div>Email: {content.email}</div>
-              <div>Direct: {content.phones.join(' • ')}</div>
+            <div className="pt-2 text-xs text-gray-300 space-y-3">
               <div>
+                <span className="text-gray-400">Email:</span>{' '}
+                <a href={`mailto:${content.email}`} className="text-gray-200 hover:text-[#FFD92E] transition-colors">
+                  {content.email}
+                </a>
+              </div>
+
+              <div>
+                <span className="text-gray-400 block mb-1">Direct Lines (Tap to call):</span>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                  {content.phones.map((phone, idx) => {
+                    const isWhatsApp = phone === '07068474849';
+                    return (
+                      <span key={idx} className="inline-flex items-center gap-1.5">
+                        <a
+                          href={`tel:${phone}`}
+                          className="inline-flex items-center gap-1 text-gray-200 hover:text-[#FFD92E] font-medium transition-colors"
+                        >
+                          {isWhatsApp && <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />}
+                          <span>{phone}</span>
+                          {isWhatsApp && <span className="text-[10px] text-[#25D366] font-bold">(WhatsApp)</span>}
+                        </a>
+                        {idx < content.phones.length - 1 && (
+                          <span className="text-gray-600 select-none">•</span>
+                        )}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {content.address && (
+                <div className="pt-2 border-t border-white/10 space-y-1">
+                  <div className="flex items-start gap-2 text-gray-300">
+                    <Icon name="MapPin" className="w-4 h-4 text-gray-400 shrink-0 mt-0.5" />
+                    <div>
+                      <p className="leading-relaxed">{content.address}</p>
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(content.address)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[#FFD92E] hover:underline font-semibold mt-1"
+                      >
+                        <span>Get Directions</span>
+                        <Icon name="ExternalLink" className="w-3 h-3" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <div className="pt-1">
                 <a
                   href={buildWhatsAppLink(content.whatsappNumber, footerWhatsAppMsg)}
                   target="_blank"

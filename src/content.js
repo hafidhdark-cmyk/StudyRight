@@ -13,7 +13,7 @@ export const content = {
     "Study abroad, Hajj and Umrah, travel planning, business consulting and flexible tricycle ownership, all in one place.",
 
   // Contact details
-  phones: ["07068474849", "09047220470", "08141828270"],
+  phones: ["07068474849", "09047220470", "08141828270", "08038231013"],
   whatsappNumber: "2347068474849", // international format, no plus sign
   email: "Olaqrightstudy26@gmail.com",
 
@@ -27,8 +27,8 @@ export const content = {
     description: "Transportation • Logistics • General Merchandise • Business Services",
   },
 
-  // TODO client: provide physical office address (e.g. city, state, street)
-  address: "", // TODO client
+  // Physical office address
+  address: "10/11 Tagoe Street, Oke-Ilewo, Abeokuta, Ogun State", // CONFIRM with client whether it is "10/11" or "1O/11"
 
   // TODO client: provide official social media handles/links
   socials: {

@@ -67,22 +67,37 @@ export default function Contact() {
               </h3>
 
               {/* Tap to Call Phones */}
-              <div className="space-y-4 mb-6">
+              <div className="space-y-3 mb-6">
                 <div className="text-xs font-bold uppercase tracking-wider text-gray-600">
                   Call Our Helpdesks (Tap to dial)
                 </div>
-                {content.phones.map((phone, idx) => (
-                  <a
-                    key={idx}
-                    href={`tel:${phone}`}
-                    className="flex items-center gap-3 text-sm sm:text-base font-bold text-[#2B2B2B] hover:text-[#0C6BA8] transition-colors group p-2 rounded-xl hover:bg-white"
-                  >
-                    <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-[#0C6BA8] group-hover:bg-[#0C6BA8] group-hover:text-white transition-colors">
-                      <Icon name="Phone" className="w-5 h-5" />
-                    </div>
-                    <span>{phone}</span>
-                  </a>
-                ))}
+                {content.phones.map((phone, idx) => {
+                  const isWhatsApp = phone === '07068474849';
+                  return (
+                    <a
+                      key={idx}
+                      href={`tel:${phone}`}
+                      className="flex items-center justify-between gap-3 text-sm sm:text-base font-bold text-[#2B2B2B] hover:text-[#0C6BA8] transition-colors group p-2 rounded-xl hover:bg-white"
+                    >
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-[#0C6BA8] group-hover:bg-[#0C6BA8] group-hover:text-white transition-colors shrink-0">
+                          {isWhatsApp ? (
+                            <WhatsAppIcon className="w-5 h-5 text-[#25D366] group-hover:text-white" />
+                          ) : (
+                            <Icon name="Phone" className="w-5 h-5" />
+                          )}
+                        </div>
+                        <span className="truncate">{phone}</span>
+                      </div>
+                      {isWhatsApp && (
+                        <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 shrink-0">
+                          <WhatsAppIcon className="w-3 h-3 text-[#25D366]" />
+                          <span>WhatsApp</span>
+                        </span>
+                      )}
+                    </a>
+                  );
+                })}
               </div>
 
               {/* Email Address */}
@@ -129,7 +144,18 @@ export default function Contact() {
                   </div>
                   <div className="flex items-start gap-3 p-2 text-sm text-gray-700">
                     <Icon name="MapPin" className="w-5 h-5 text-gray-500 shrink-0 mt-0.5" />
-                    <span>{content.address}</span>
+                    <div className="space-y-1">
+                      <span className="block leading-relaxed">{content.address}</span>
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(content.address)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0C6BA8] hover:text-[#095281] hover:underline"
+                      >
+                        <span>Get Directions</span>
+                        <Icon name="ExternalLink" className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               )}

@@ -36,10 +36,10 @@ npm run preview
 All client-facing copy, contact details, service offerings, packages, and settings live in **one single file**: [`src/content.js`](file:///c:/StudyRight/src/content.js). Components read from this file and never hardcode text or numbers.
 
 ### Key fields to update in `src/content.js`:
-- **Phone Numbers**: Edit `phones: ["07068474849", "09047220470", "08141828270"]`
+- **Phone Numbers**: Edit `phones: ["07068474849", "09047220470", "08141828270", "08038231013"]`
 - **WhatsApp Direct Line**: Edit `whatsappNumber: "2347068474849"` (in international format without `+`)
 - **Email Address**: Edit `email: "Olaqrightstudy26@gmail.com"`
-- **Physical Address**: Fill `address: ""` (renders automatically once filled)
+- **Physical Address**: Edit `address: "10/11 Tagoe Street, Oke-Ilewo, Abeokuta, Ogun State"` (CONFIRM with client whether it is "10/11" or "1O/11")
 - **Social Media Links**: Fill `socials: { instagram: "", facebook: "", ... }` (renders automatically once filled)
 - **Official Accreditations / Licences**: Add items to `licences: []` (CAC, NAHCON, NCAA, etc.)
 - **Company Statistics**: Fill `stats: [ { label: "Years of experience", value: "..." }, ... ]`
@@ -100,7 +100,6 @@ The following items in [`src/content.js`](file:///c:/StudyRight/src/content.js) 
 
 | Item | Field in `content.js` | Current Status | Expected Format |
 |---|---|---|---|
-| **Office Address** | `address` | Empty `""` | e.g. "Suite 12, Commercial Plaza, Lagos, Nigeria" |
 | **Social Media** | `socials.instagram` | Empty `""` | Full URL (e.g. `https://instagram.com/studyright`) |
 | **Social Media** | `socials.facebook` | Empty `""` | Full URL (e.g. `https://facebook.com/studyright`) |
 | **Social Media** | `socials.tiktok` | Empty `""` | Full URL (e.g. `https://tiktok.com/@studyright`) |
