@@ -226,7 +226,35 @@
     />
   </head>
   <body class="bg-white text-[#2B2B2B] antialiased selection:bg-[#F27A2E] selection:text-white">
-    <div id="root"></div>
+    <div id="root">
+      <!-- Semantic Static Fallback for Search Engine Crawlers (Bingbot / Googlebot) & Instant Pre-Hydration Shell -->
+      <header style="padding: 16px 24px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #F3F4F6;">
+        <a href="/" aria-label="StudyRight Home">
+          <img src="/studyright-logo.png" alt="StudyRight Logo" width="180" height="50" style="height: auto; max-width: 180px;" />
+        </a>
+      </header>
+      <main style="max-width: 800px; margin: 48px auto; padding: 0 20px; text-align: center;">
+        <div style="display: inline-block; padding: 4px 12px; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 9999px; font-size: 13px; font-weight: 600; color: #2B2B2B; margin-bottom: 20px;">
+          Nigerian Travel &amp; Business Advisory • In collaboration with Toluwalase Multi Blitz
+        </div>
+        <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: #2B2B2B; line-height: 1.15; margin: 0 0 20px 0; letter-spacing: -0.02em;">
+          Your Pathway to Study, Travel &amp; Business Partnership
+        </h1>
+        <p style="font-size: 1.125rem; color: #4B5563; line-height: 1.6; margin: 0 auto 28px auto; max-width: 640px;">
+          Study abroad, Hajj and Umrah, travel planning, business consulting and flexible tricycle ownership, all in one place.
+        </p>
+        <p style="font-size: 0.875rem; color: #64748B; font-weight: 600; margin: 0;">
+          Study Right Global Web Limited | RC 9315987
+        </p>
+      </main>
+    </div>
+    <noscript>
+      <div style="background: #FFFDF0; padding: 16px; border: 1px solid #FFD92E; text-align: center; margin: 16px; border-radius: 8px;">
+        <p style="margin: 0; font-weight: 600; color: #2B2B2B;">
+          Please enable JavaScript to experience the full interactive features of the StudyRight web platform.
+        </p>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
