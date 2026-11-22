@@ -7,7 +7,7 @@ import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Tricycle() {
   return (
-    <section id="tricycle" className="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section id="tricycle" className="scroll-mt-20 md:scroll-mt-24 py-16 md:py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-br from-[#FFFDF0] via-[#FFF9D6] to-[#FFF4BE] border border-[#FFD92E]/60 rounded-4xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-premium">
           {/* Decorative background shapes */}

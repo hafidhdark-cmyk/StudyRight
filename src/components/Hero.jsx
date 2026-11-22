@@ -82,7 +82,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-[#111827] font-bold text-base shadow-sm hover:shadow-md transition-all active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2"
+              className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-7 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-[#111827] font-bold text-base shadow-sm hover:shadow-md transition-all active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2"
             >
               <WhatsAppIcon className="w-5 h-5 text-[#111827]" />
               <span>Chat on WhatsApp</span>
@@ -90,7 +90,7 @@ export default function Hero() {
 
             <a
               href="#services"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white hover:bg-gray-50 text-[#2B2B2B] font-bold text-base border border-gray-200 shadow-xs hover:border-gray-300 transition-all active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0C6BA8]"
+              className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2 px-7 py-3.5 rounded-xl bg-white hover:bg-gray-50 text-[#2B2B2B] font-bold text-base border border-gray-200 shadow-xs hover:border-gray-300 transition-all active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0C6BA8]"
             >
               <span>View Services</span>
               <Icon name="ArrowRight" className="w-4 h-4 text-gray-500" />

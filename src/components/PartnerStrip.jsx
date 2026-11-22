@@ -14,8 +14,8 @@ export default function PartnerStrip() {
             <p className="text-sm font-semibold text-[#2B2B2B] mt-0.5">
               In official collaboration with
             </p>
-            <p className="text-xs text-gray-500">
-              {content.partner.regNumber}
+            <p className="text-xs text-gray-600 font-medium mt-0.5">
+              {content.partner.legalName} | RC {content.partner.regNumber}
             </p>
           </div>
 

@@ -5,7 +5,7 @@ import Icon from './Icon';
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-16 md:py-24 bg-[#F8FAFC] border-t border-gray-100">
+    <section id="how-it-works" className="scroll-mt-20 md:scroll-mt-24 py-16 md:py-24 bg-[#F8FAFC] border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center mb-14 md:mb-16">

@@ -7,7 +7,7 @@
 
 export const content = {
   businessName: "StudyRight",
-  legalName: "Study Right Global Web Ltd.",
+  legalName: "Study Right Global Web Limited",
   tagline: "Your Pathway to Study, Travel & Business Partnership",
   subheadline:
     "Study abroad, Hajj and Umrah, travel planning, business consulting and flexible tricycle ownership, all in one place.",
@@ -22,13 +22,13 @@ export const content = {
   partner: {
     name: "Toluwalase Multi Blitz",
     legalName: "Toluwalase Tricycle Multibliz Limited",
-    regNumber: "RC NO: 9553810",
+    regNumber: "9553810",
     logo: "/toluwalase-logo.png",
     description: "Transportation • Logistics • General Merchandise • Business Services",
   },
 
   // Physical office address
-  address: "10/11 Tagoe Street, Oke-Ilewo, Abeokuta, Ogun State",
+  address: "10/11 Tagoe Street, Oke-Ilewo, Abeokuta, Ogun State", // CONFIRM with client: "10/11" or "1O/11"
 
   // TODO client: provide official social media handles/links
   socials: {
@@ -38,13 +38,15 @@ export const content = {
     youtube: "", // TODO client
   },
 
-  // TODO client: provide regulatory registrations & certifications (CAC, NAHCON, NCAA, etc.)
-  licences: [], // TODO client (CAC, NAHCON, etc.), render only if filled
+  // Corporate registrations & certifications
+  licences: [
+    { label: "CAC Registered", number: "RC 9315987" },
+  ],
 
-  // TODO client: provide verifiable company milestones & numbers
+  // Key facts / metrics
   stats: [
-    { label: "Years of experience", value: "" }, // TODO client
-    { label: "Clients served", value: "" }, // TODO client
+    { label: "Services", value: "4" }, // TODO client
+    { label: "CAC Registered", value: "Yes" }, // TODO client
   ],
 
   // 4 Core Colour-Blocked Services

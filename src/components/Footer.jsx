@@ -8,7 +8,7 @@ export default function Footer() {
   const footerWhatsAppMsg = `Hello ${content.businessName}, I am contacting you from your website footer.`;
 
   return (
-    <footer className="bg-[#1C1C1C] text-white pt-16 pb-12 border-t border-white/10">
+    <footer className="bg-[#1C1C1C] text-white pt-16 pb-24 sm:pb-16 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-white/10">
           {/* Brand Info */}
@@ -26,8 +26,8 @@ export default function Footer() {
             <p className="text-sm text-gray-300 leading-relaxed max-w-sm font-normal">
               {content.tagline}. Providing reliable educational advisory, pilgrimage logistics, business registration, and tricycle financing across Nigeria.
             </p>
-            <div className="text-xs text-gray-400 font-medium">
-              {content.legalName}
+            <div className="text-xs text-gray-300 font-medium">
+              {content.legalName} | {content.licences[0]?.number || "RC 9315987"}
             </div>
           </div>
 
@@ -65,27 +65,27 @@ export default function Footer() {
                 loading="lazy"
               />
             </div>
-            <p className="text-xs text-gray-400">
-              Partnering on transportation, logistics, and hire-purchase financing ({content.partner.regNumber}).
+            <p className="text-xs text-gray-400 leading-relaxed">
+              In collaboration with {content.partner.legalName} (RC {content.partner.regNumber}) on transportation, logistics, and hire-purchase financing.
             </p>
             <div className="pt-2 text-xs text-gray-300 space-y-3">
               <div>
                 <span className="text-gray-400">Email:</span>{' '}
-                <a href={`mailto:${content.email}`} className="text-gray-200 hover:text-[#FFD92E] transition-colors">
+                <a href={`mailto:${content.email}`} className="text-gray-200 hover:text-[#FFD92E] transition-colors py-1 inline-block min-h-[44px]">
                   {content.email}
                 </a>
               </div>
 
               <div>
                 <span className="text-gray-400 block mb-1">Direct Lines (Tap to call):</span>
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
                   {content.phones.map((phone, idx) => {
                     const isWhatsApp = phone === '07068474849';
                     return (
                       <span key={idx} className="inline-flex items-center gap-1.5">
                         <a
                           href={`tel:${phone}`}
-                          className="inline-flex items-center gap-1 text-gray-200 hover:text-[#FFD92E] font-medium transition-colors"
+                          className="inline-flex items-center gap-1.5 min-h-[44px] py-1 text-sm text-gray-200 hover:text-[#FFD92E] font-medium transition-colors"
                         >
                           {isWhatsApp && <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />}
                           <span>{phone}</span>

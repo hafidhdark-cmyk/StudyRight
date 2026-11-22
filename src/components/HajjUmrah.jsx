@@ -9,7 +9,7 @@ export default function HajjUmrah() {
   const hasPackages = Array.isArray(content.packages) && content.packages.length > 0;
 
   return (
-    <section id="hajj-umrah" className="py-16 md:py-24 bg-[#FAF9F5] border-y border-stone-200/60 relative overflow-hidden">
+    <section id="hajj-umrah" className="scroll-mt-20 md:scroll-mt-24 py-16 md:py-24 bg-[#FAF9F5] border-y border-stone-200/60 relative overflow-hidden">
       {/* Background ambient accents */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#F27A2E]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#B08821]/5 rounded-full blur-3xl pointer-events-none" />
@@ -112,7 +112,7 @@ export default function HajjUmrah() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Message StudyRight for current pilgrimage details on WhatsApp"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#C25212] hover:bg-[#a33e05] text-white text-sm font-bold shadow-xs transition-all active:scale-95"
+                  className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2 px-6 py-3 rounded-xl bg-[#C25212] hover:bg-[#a33e05] text-white text-sm font-bold shadow-xs transition-all active:scale-95"
                 >
                   <WhatsAppIcon className="w-4 h-4 text-white" />
                   <span>Message Us for Current Details</span>
@@ -129,7 +129,7 @@ export default function HajjUmrah() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Enquire about Hajj & Umrah on WhatsApp"
-            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#2B2B2B] hover:bg-black text-white font-bold text-sm shadow-sm hover:shadow-md transition-all active:scale-[0.98]"
+            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-7 py-3.5 rounded-xl bg-[#2B2B2B] hover:bg-black text-white font-bold text-sm shadow-sm hover:shadow-md transition-all active:scale-[0.98]"
           >
             <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
             <span>Enquire About Hajj & Umrah</span>

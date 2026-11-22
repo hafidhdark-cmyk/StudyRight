@@ -43,7 +43,7 @@ export default function Contact() {
   const hasLicences = Array.isArray(content.licences) && content.licences.length > 0;
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-white relative">
+    <section id="contact" className="scroll-mt-20 py-16 md:py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="max-w-2xl mx-auto text-center mb-12 md:mb-16">
@@ -164,16 +164,14 @@ export default function Contact() {
               {hasLicences && (
                 <div className="pt-4 border-t border-stone-200">
                   <div className="text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">
-                    Accreditation & Registrations
+                    Corporate Registration
                   </div>
-                  <ul className="space-y-1 text-xs text-gray-700">
-                    {content.licences.map((licence, lIdx) => (
-                      <li key={lIdx} className="flex items-center gap-2">
-                        <Icon name="CheckCircle2" className="w-3.5 h-3.5 text-green-700" />
-                        <span>{licence}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-gray-200/90 text-sm font-semibold text-[#2B2B2B]">
+                    <Icon name="CheckCircle2" className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span className="break-words">
+                      {content.legalName} | {content.licences[0]?.number || "RC 9315987"}
+                    </span>
+                  </div>
                 </div>
               )}
 
@@ -226,7 +224,7 @@ export default function Contact() {
                     placeholder="e.g. Ibrahim Adeyemi"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0C6BA8] focus:ring-2 focus:ring-[#0C6BA8]/20 text-sm font-medium text-[#2B2B2B] placeholder-gray-400 outline-none transition-all"
+                    className="w-full min-h-[48px] px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0C6BA8] focus:ring-2 focus:ring-[#0C6BA8]/20 text-base font-medium text-[#2B2B2B] placeholder-gray-400 outline-none transition-all"
                   />
                 </div>
 
@@ -242,7 +240,7 @@ export default function Contact() {
                     placeholder="e.g. 08012345678"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0C6BA8] focus:ring-2 focus:ring-[#0C6BA8]/20 text-sm font-medium text-[#2B2B2B] placeholder-gray-400 outline-none transition-all"
+                    className="w-full min-h-[48px] px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0C6BA8] focus:ring-2 focus:ring-[#0C6BA8]/20 text-base font-medium text-[#2B2B2B] placeholder-gray-400 outline-none transition-all"
                   />
                 </div>
 
@@ -256,7 +254,7 @@ export default function Contact() {
                       id="service"
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0C6BA8] focus:ring-2 focus:ring-[#0C6BA8]/20 text-sm font-medium text-[#2B2B2B] bg-white outline-none appearance-none transition-all pr-10 cursor-pointer"
+                      className="w-full min-h-[48px] px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0C6BA8] focus:ring-2 focus:ring-[#0C6BA8]/20 text-base font-medium text-[#2B2B2B] bg-white outline-none appearance-none transition-all pr-10 cursor-pointer"
                     >
                       {serviceOptions.map((opt) => (
                         <option key={opt} value={opt}>
@@ -281,7 +279,7 @@ export default function Contact() {
                     placeholder="Tell us about the school, country of interest, pilgrimage season, business entity, or tricycle inquiry..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0C6BA8] focus:ring-2 focus:ring-[#0C6BA8]/20 text-sm font-medium text-[#2B2B2B] placeholder-gray-400 outline-none transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0C6BA8] focus:ring-2 focus:ring-[#0C6BA8]/20 text-base font-medium text-[#2B2B2B] placeholder-gray-400 outline-none transition-all resize-none"
                   />
                 </div>
 
@@ -289,7 +287,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   aria-label="Send enquiry via WhatsApp"
-                  className="w-full py-4 px-6 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-[#111827] font-bold text-base shadow-sm hover:shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2.5 cursor-pointer"
+                  className="w-full min-h-[48px] py-3.5 px-6 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-[#111827] font-bold text-base shadow-sm hover:shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2.5 cursor-pointer"
                 >
                   <WhatsAppIcon className="w-5 h-5 text-[#111827]" />
                   <span>Send via WhatsApp</span>
