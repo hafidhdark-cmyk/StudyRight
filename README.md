@@ -29,6 +29,23 @@ npm run preview
 
 ---
 
+## 🌐 AEO & SEO Architecture (`https://studyright.ng`)
+
+The platform implements the standard **Answer Engine Optimization (AEO)**, **Generative Engine Optimization (GEO)**, and technical **SEO** playbook:
+
+| Layer | Implementation | Purpose & Target Systems |
+| :--- | :--- | :--- |
+| **AEO Knowledge Index** | `public/llms.txt` | Machine-readable index for ChatGPT, Claude, Perplexity, Gemini, Apple Intelligence |
+| **AEO Full Knowledge Base** | `public/llms-full.txt` | Complete institutional archive (services, FAQs, registration, contact details) |
+| **AI Crawler Directives** | `public/robots.txt` | Explicit crawl permissions for GPTBot, ClaudeBot, PerplexityBot, Applebot, Googlebot, Bingbot |
+| **XML Sitemap** | `public/sitemap.xml` | Indexing priority & freshness for Google Search Console and Bing Webmasters |
+| **Schema.org Knowledge Graph** | `index.html` (`@graph`) | Connected JSON-LD entities: `ProfessionalService`, `TravelAgency`, `WebSite`, `Service` (x4), `FAQPage` |
+| **Metadata & OpenGraph** | `index.html` | Exact 140–158 char descriptions, 50–60 char titles, WhatsApp / iMessage / Twitter preview cards |
+| **Googlebot Favicon Engine** | `public/favicon.ico`, `icon.png`, `apple-touch-icon.png` | Multi-size square icons (16, 32, 48, 180, 512px) preventing generic globe in Google Search results |
+| **Canonical Domain** | `https://studyright.ng/` | Apex domain 200 OK (`www.studyright.ng` redirects via 308) |
+
+---
+
 ## 📝 1. Content Management (`src/content.js`)
 
 All client-facing copy, contact information, service offerings, packages, and settings live in **one single file**: [`src/content.js`](file:///c:/StudyRight/src/content.js). Components read from this file and never hardcode text or numbers.
