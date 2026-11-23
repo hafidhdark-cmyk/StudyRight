@@ -32,10 +32,10 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-white/95 backdrop-blur-md shadow-sm py-2.5 sm:py-3 border-b border-gray-100'
-          : 'bg-white/80 backdrop-blur-sm py-3 sm:py-4 md:py-5'
+          : 'bg-white/95 backdrop-blur-md shadow-xs py-3 sm:py-4 md:py-5 border-b border-gray-100/60'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,11 +107,11 @@ export default function Header() {
       {mobileMenuOpen && (
         <>
           <div
-            className="lg:hidden fixed inset-0 bg-black/40 backdrop-blur-xs z-40 top-[57px] sm:top-[73px]"
+            className="lg:hidden fixed inset-0 bg-black/40 backdrop-blur-xs -z-10"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
-          <div className="lg:hidden fixed inset-x-0 top-[57px] sm:top-[73px] bg-white border-b border-gray-200 shadow-xl px-5 py-6 transition-all z-50 max-h-[calc(100vh-75px)] overflow-y-auto">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-xl px-5 py-6 transition-all max-h-[calc(100vh-100%)] overflow-y-auto">
             <nav className="flex flex-col space-y-2" aria-label="Mobile Navigation">
               {content.navigation.map((item) => (
                 <a

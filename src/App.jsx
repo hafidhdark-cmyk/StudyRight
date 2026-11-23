@@ -15,8 +15,11 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-white text-[#2B2B2B] overflow-x-hidden">
-      {/* 1. Sticky Header */}
+      {/* 1. Fixed Header */}
       <Header />
+
+      {/* Spacer to prevent fixed header from overlapping Hero */}
+      <div className="h-[64px] sm:h-[78px] md:h-[90px] shrink-0" aria-hidden="true" />
 
       <main className="flex-grow overflow-x-hidden">
         {/* 2. Hero Section */}
