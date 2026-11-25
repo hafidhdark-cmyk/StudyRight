@@ -28,7 +28,7 @@ export const content = {
   },
 
   // Physical office address
-  address: "10/11 Tagoe Street, Oke-Ilewo, Abeokuta, Ogun State", // CONFIRM with client: "10/11" or "1O/11"
+  address: "10/11 Tagoe Street, Oke-Ilewo, Abeokuta, Ogun State",
 
   // TODO client: provide official social media handles/links
   socials: {
@@ -269,7 +269,7 @@ export const content = {
     {
       question: "Where is your office?",
       answer:
-        "10/11 Tagoe Street, Oke-Ilewo, Abeokuta, Ogun State. You can also reach us on WhatsApp.", // CONFIRM with client: '10/11' or '1O/11'
+        "10/11 Tagoe Street, Oke-Ilewo, Abeokuta, Ogun State. You can also reach us on WhatsApp.",
     },
   ],
 
