@@ -222,13 +222,56 @@ export const content = {
     },
   ],
 
-  // TODO client: provide authentic client reviews and testimonials
-  // When empty, component will gracefully not render.
-  testimonials: [], // TODO client
+  // TODO client: real testimonials, only with permission
+  testimonials: [],
 
-  // TODO client: provide frequently asked questions
-  // When empty, component will gracefully not render.
-  faqs: [], // TODO client
+  faqs: [
+    {
+      question: "What visas do you help with?",
+      answer:
+        "We help with UK student, working and family visas, and working visas for Gulf countries. We also handle USA visas based on your request.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Contact us on WhatsApp or fill in the enquiry form. We'll ask about your goal, then tell you which route fits and what documents you need.",
+    },
+    {
+      question: "What documents will I need?",
+      answer:
+        "It depends on the visa type and country. We'll give you a checklist for your case after the first consultation.",
+    },
+    {
+      question: "Can you help me with a UK student visa?",
+      answer:
+        "Yes. Tell us what you want to study and where, and we'll guide you through the process.",
+    },
+    {
+      question: "Do you offer work visas outside the UK?",
+      answer:
+        "Yes, for Gulf countries. Message us with the country and the kind of work.",
+    },
+    {
+      question: "Can you help with a USA visa?",
+      answer:
+        "Yes, on request. Contact us with your plans and we'll tell you how we can help.",
+    },
+    {
+      question: "How much do your services cost?",
+      answer:
+        "Fees depend on the visa type and your case. Contact us for a quote.",
+    },
+    {
+      question: "How long does the process take?",
+      answer:
+        "Timelines vary by country, visa type and the authority handling your application. We'll give you an honest estimate once we know your case.",
+    },
+    {
+      question: "Where is your office?",
+      answer:
+        "10/11 Tagoe Street, Oke-Ilewo, Abeokuta, Ogun State. You can also reach us on WhatsApp.", // CONFIRM with client: '10/11' or '1O/11'
+    },
+  ],
 
   // Navigation Links
   navigation: [
@@ -236,6 +279,7 @@ export const content = {
     { label: "Hajj & Umrah", href: "#hajj-umrah" },
     { label: "Tricycle Plans", href: "#tricycle" },
     { label: "How It Works", href: "#how-it-works" },
+    { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },
   ],
 };

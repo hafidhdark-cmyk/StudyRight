@@ -6,7 +6,6 @@ import HajjUmrah from './components/HajjUmrah';
 import Tricycle from './components/Tricycle';
 import HowItWorks from './components/HowItWorks';
 import PartnerStrip from './components/PartnerStrip';
-import Testimonials from './components/Testimonials';
 import Faq from './components/Faq';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -40,8 +39,7 @@ export default function App() {
         {/* 7. Partner Strip */}
         <PartnerStrip />
 
-        {/* 8. Testimonials & FAQ (Conditional) */}
-        <Testimonials />
+        {/* 8. Frequently Asked Questions (Accordion) */}
         <Faq />
 
         {/* 9. Contact & Enquiry */}
