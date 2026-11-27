@@ -27,6 +27,10 @@ import {
   MapPin,
   Clock,
   HelpCircle,
+  Play,
+  Pause,
+  Volume2,
+  VolumeX,
 } from 'lucide-react';
 
 const icons = {
@@ -57,6 +61,10 @@ const icons = {
   MapPin,
   Clock,
   HelpCircle,
+  Play,
+  Pause,
+  Volume2,
+  VolumeX,
 };
 
 export default function Icon({ name, className = 'w-5 h-5', ...props }) {
