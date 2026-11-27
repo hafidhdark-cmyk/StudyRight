@@ -46,7 +46,7 @@ export default function HajjUmrah() {
               <h3 className="text-lg font-bold text-[#2B2B2B] mb-2">
                 {highlight.title}
               </h3>
-              <p className="text-sm text-stone-600 leading-relaxed">
+              <p className="text-base text-stone-600 leading-relaxed">
                 {highlight.description}
               </p>
             </motion.div>
@@ -55,7 +55,7 @@ export default function HajjUmrah() {
 
         {/* Packages Grid or Empty State Card */}
         <div className="mb-12">
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex flex-wrap items-center justify-between gap-2 mb-6">
             <h3 className="text-lg sm:text-xl font-bold text-[#2B2B2B]">
               Current Pilgrimage Packages
             </h3>
@@ -96,14 +96,14 @@ export default function HajjUmrah() {
             </div>
           ) : (
             /* Graceful Empty State Announcement Card */
-            <div className="bg-white rounded-3xl p-8 sm:p-10 border border-stone-200/90 shadow-sm text-center max-w-2xl mx-auto">
+            <div className="bg-white rounded-3xl p-6 sm:p-10 border border-stone-200/90 shadow-sm text-center max-w-2xl mx-auto">
               <div className="w-14 h-14 mx-auto rounded-2xl bg-amber-50 text-[#C25212] flex items-center justify-center mb-4 border border-amber-100">
                 <Icon name="CalendarCheck" className="w-7 h-7" />
               </div>
               <h4 className="text-xl font-bold text-[#2B2B2B]">
                 Pilgrimage Packages Announced Soon
               </h4>
-              <p className="mt-2 text-sm text-stone-700 max-w-md mx-auto leading-relaxed">
+              <p className="mt-2 text-base text-stone-700 max-w-md mx-auto leading-relaxed">
                 Official Umrah and Hajj season packages are currently being scheduled with NAHCON and verified airline partners. Message our pilgrimage desk for current slot availability and visa timelines.
               </p>
               <div className="mt-6">

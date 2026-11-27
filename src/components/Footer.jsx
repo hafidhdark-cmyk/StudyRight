@@ -8,7 +8,7 @@ export default function Footer() {
   const footerWhatsAppMsg = `Hello ${content.businessName}, I am contacting you from your website footer.`;
 
   return (
-    <footer className="bg-[#1C1C1C] text-white pt-16 pb-24 sm:pb-16 border-t border-white/10">
+    <footer className="bg-[#1C1C1C] text-white pt-16 pb-28 sm:pb-20 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-white/10">
           {/* Brand Info */}
@@ -36,12 +36,12 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-gray-300">
               Quick Navigation
             </h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-0.5 text-sm">
               {content.navigation.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="text-gray-300 hover:text-[#FFD92E] transition-colors"
+                    className="inline-flex items-center min-h-[44px] py-1 text-gray-300 hover:text-[#FFD92E] transition-colors"
                   >
                     {item.label}
                   </a>
@@ -110,7 +110,7 @@ export default function Footer() {
                         href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(content.address)}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-[#FFD92E] hover:underline font-semibold mt-1"
+                        className="inline-flex items-center gap-1 min-h-[44px] py-1 text-[#FFD92E] hover:underline font-semibold"
                       >
                         <span>Get Directions</span>
                         <Icon name="ExternalLink" className="w-3 h-3" />
@@ -125,7 +125,7 @@ export default function Footer() {
                   href={buildWhatsAppLink(content.whatsappNumber, footerWhatsAppMsg)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#25D366] hover:text-[#20bd5a] font-bold transition-colors"
+                  className="inline-flex items-center gap-2 min-h-[44px] py-1 text-sm text-[#25D366] hover:text-[#20bd5a] font-bold transition-colors"
                   aria-label="Direct WhatsApp Support"
                 >
                   <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
@@ -137,17 +137,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 text-center sm:text-left">
           <div>
             © 2026 {content.businessName}. All rights reserved.
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
             <span>Study Abroad</span>
-            <span>•</span>
+            <span aria-hidden="true">•</span>
             <span>Hajj & Umrah</span>
-            <span>•</span>
+            <span aria-hidden="true">•</span>
             <span>Corporate Services</span>
-            <span>•</span>
+            <span aria-hidden="true">•</span>
             <span>Tricycle Hire-Purchase</span>
           </div>
         </div>

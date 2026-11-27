@@ -61,7 +61,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Left Column: Direct Contact Information */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-[#FAF9F5] rounded-3xl p-7 sm:p-8 border border-stone-200 shadow-xs">
+            <div className="bg-[#FAF9F5] rounded-3xl p-5 sm:p-8 border border-stone-200 shadow-xs">
               <h3 className="text-xl font-bold text-[#2B2B2B] mb-6">
                 Contact Information
               </h3>
@@ -150,7 +150,7 @@ export default function Contact() {
                         href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(content.address)}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0C6BA8] hover:text-[#095281] hover:underline"
+                        className="inline-flex items-center gap-1.5 min-h-[44px] py-1 text-sm font-bold text-[#0C6BA8] hover:text-[#095281] hover:underline"
                       >
                         <span>Get Directions</span>
                         <Icon name="ExternalLink" className="w-3.5 h-3.5" />
@@ -201,7 +201,7 @@ export default function Contact() {
 
           {/* Right Column: Interactive WhatsApp Pre-fill Enquiry Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-3xl p-7 sm:p-9 border border-gray-200 shadow-premium">
+            <div className="bg-white rounded-3xl p-5 sm:p-9 border border-gray-200 shadow-premium">
               <div className="mb-6">
                 <h3 className="text-xl sm:text-2xl font-extrabold text-[#2B2B2B]">
                   Send an Enquiry

@@ -29,7 +29,7 @@ export default function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: idx * 0.15 }}
-              className="bg-white rounded-2xl p-8 border border-gray-200/80 shadow-xs relative flex flex-col justify-between"
+              className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200/80 shadow-xs relative flex flex-col justify-between"
             >
               <div>
                 {/* Step Number + Icon */}
@@ -45,7 +45,7 @@ export default function HowItWorks() {
                 <h3 className="text-xl font-bold text-[#2B2B2B] mb-3">
                   {step.title}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed font-normal">
+                <p className="text-base text-gray-600 leading-relaxed font-normal">
                   {step.description}
                 </p>
               </div>

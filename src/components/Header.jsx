@@ -81,8 +81,8 @@ export default function Header() {
               aria-label="Chat with StudyRight on WhatsApp"
             >
               <WhatsAppIcon className="w-4 h-4 text-[#111827]" />
-              <span className="hidden xs:inline sm:inline">Chat on WhatsApp</span>
-              <span className="xs:hidden sm:hidden">WhatsApp</span>
+              <span className="hidden sm:inline">Chat on WhatsApp</span>
+              <span className="sm:hidden">WhatsApp</span>
             </a>
 
             {/* Mobile Hamburger Button */}

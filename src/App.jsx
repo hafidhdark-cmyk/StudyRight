@@ -12,6 +12,7 @@ import Faq from './components/Faq';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import BackToTop from './components/BackToTop';
 
 export default function App() {
   return (
@@ -57,7 +58,8 @@ export default function App() {
       {/* 12. Footer */}
       <Footer />
 
-      {/* 13. Floating WhatsApp Button */}
+      {/* 13. Back to Top & Floating WhatsApp Button */}
+      <BackToTop />
       <FloatingWhatsApp />
     </div>
   );
