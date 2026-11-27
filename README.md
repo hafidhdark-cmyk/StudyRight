@@ -73,6 +73,5 @@ The following items in [`src/content.js`](file:///c:/StudyRight/src/content.js) 
 | **Social Media** | `socials.tiktok` | Empty `""` | Add official TikTok URL when ready |
 | **Social Media** | `socials.youtube` | Empty `""` | Add official YouTube URL when ready |
 | **Pilgrimage Packages** | `packages` | Empty array `[]` | Displays graceful announcement card until populated |
-| **Client Reviews** | `testimonials` | Empty array `[]` | Real testimonials, only with client permission |
 
 *Note: The physical address, all four phone lines, and Study Right Global Web Limited legal/CAC registration (RC 9315987) are fully integrated and active on the live site.*

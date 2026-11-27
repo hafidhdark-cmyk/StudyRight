@@ -25,6 +25,14 @@ export const content = {
     regNumber: "9553810",
     logo: "/toluwalase-logo.png",
     description: "Transportation • Logistics • General Merchandise • Business Services",
+    photo: {
+      src: "/media/toluwalase-bajaj.jpg",
+      width: 1280,
+      height: 960,
+      alt: "Toluwalase Tricycle Multibliz Limited management team standing with a Bajaj sales representative around a conference room table",
+      caption:
+        "Toluwalase Tricycle Multibliz Limited management meeting with a Bajaj sales representative",
+    },
   },
 
   // Physical office address
@@ -222,8 +230,51 @@ export const content = {
     },
   ],
 
-  // TODO client: real testimonials, only with permission
-  testimonials: [],
+  // StudyRight Gallery - Meetings and recognition
+  gallery: {
+    title: "Meetings and recognition",
+    items: [
+      {
+        src: "/media/studyright-award.jpg",
+        width: 1080,
+        height: 810,
+        alt: "StudyRight management receiving a certificate on stage at the Admission Group Partner Excellence Summit in Nigeria",
+        caption:
+          "StudyRight management at the excellence award from Bloomsbury Institute London and Admission Group",
+      },
+      {
+        src: "/media/studyright-universities.jpg",
+        width: 1080,
+        height: 810,
+        alt: "StudyRight management on stage with educational representatives in front of a UK universities summit backdrop",
+        caption:
+          "StudyRight management meeting representatives of Hull University, Arden University and other UK universities",
+      },
+    ],
+  },
+
+  // Beneficiary video testimonials
+  testimonialsSection: {
+    title: "What beneficiaries say about Toluwalase Tricycle Multibliz",
+  },
+  testimonials: [
+    {
+      id: "testimonial-1",
+      videoSrc: "/media/testimonial-1.mp4",
+      posterSrc: "/media/testimonial-1-poster.jpg",
+      width: 1280,
+      height: 720,
+      caption: "Beneficiary of Toluwalase Tricycle Multibliz service",
+    },
+    {
+      id: "testimonial-2",
+      videoSrc: "/media/testimonial-2.mp4",
+      posterSrc: "/media/testimonial-2-poster.jpg",
+      width: 720,
+      height: 1280,
+      caption: "Beneficiary of Toluwalase Tricycle Multibliz service",
+    },
+  ],
 
   faqs: [
     {
@@ -279,6 +330,7 @@ export const content = {
     { label: "Hajj & Umrah", href: "#hajj-umrah" },
     { label: "Tricycle Plans", href: "#tricycle" },
     { label: "How It Works", href: "#how-it-works" },
+    { label: "Testimonials", href: "#testimonials" },
     { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },
   ],

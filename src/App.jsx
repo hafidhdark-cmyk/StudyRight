@@ -2,10 +2,12 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import Gallery from './components/Gallery';
 import HajjUmrah from './components/HajjUmrah';
 import Tricycle from './components/Tricycle';
 import HowItWorks from './components/HowItWorks';
 import PartnerStrip from './components/PartnerStrip';
+import Testimonials from './components/Testimonials';
 import Faq from './components/Faq';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -27,29 +29,35 @@ export default function App() {
         {/* 3. Colour-Blocked Services */}
         <Services />
 
-        {/* 4. Hajj & Umrah Feature */}
+        {/* 4. StudyRight Gallery: Meetings and recognition */}
+        <Gallery />
+
+        {/* 5. Hajj & Umrah Feature */}
         <HajjUmrah />
 
-        {/* 5. Tricycle Feature */}
+        {/* 6. Tricycle Feature */}
         <Tricycle />
 
-        {/* 6. How It Works */}
+        {/* 7. How It Works */}
         <HowItWorks />
 
-        {/* 7. Partner Strip */}
+        {/* 8. Partner Strip */}
         <PartnerStrip />
 
-        {/* 8. Frequently Asked Questions (Accordion) */}
+        {/* 9. Beneficiary Video Testimonials */}
+        <Testimonials />
+
+        {/* 10. Frequently Asked Questions (Accordion) */}
         <Faq />
 
-        {/* 9. Contact & Enquiry */}
+        {/* 11. Contact & Enquiry */}
         <Contact />
       </main>
 
-      {/* 10. Footer */}
+      {/* 12. Footer */}
       <Footer />
 
-      {/* 11. Floating WhatsApp Button */}
+      {/* 13. Floating WhatsApp Button */}
       <FloatingWhatsApp />
     </div>
   );
