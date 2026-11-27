@@ -1,11 +1,12 @@
 import React from 'react';
 import { content } from '../content';
+import Icon from './Icon';
 
 export default function PartnerStrip() {
   const photo = content.partner?.photo;
 
   return (
-    <section className="py-14 md:py-20 bg-white border-y border-gray-100">
+    <section className="py-16 md:py-20 bg-white border-y border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 text-center md:text-left">
           {/* Label text */}
@@ -37,8 +38,8 @@ export default function PartnerStrip() {
         {/* Partner Management Photo Card */}
         {photo && (
           <div className="mt-10 md:mt-12 max-w-3xl mx-auto">
-            <figure className="bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-xs hover:shadow-subtle transition-shadow flex flex-col">
-              <div className="w-full aspect-[4/3] bg-stone-100 flex items-center justify-center overflow-hidden">
+            <figure className="bg-white rounded-3xl p-2.5 sm:p-3.5 border border-gray-200/90 shadow-premium flex flex-col">
+              <div className="w-full aspect-[4/3] rounded-2xl bg-stone-100 flex items-center justify-center overflow-hidden ring-1 ring-black/5">
                 <img
                   src={photo.src}
                   alt={photo.alt}
@@ -48,8 +49,13 @@ export default function PartnerStrip() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <figcaption className="p-5 sm:p-6 text-base font-medium text-[#2B2B2B] leading-relaxed border-t border-gray-100 text-center">
-                {photo.caption}
+              <figcaption className="pt-4 pb-2 px-2.5 flex items-center justify-center gap-3 text-center">
+                <div className="w-9 h-9 rounded-xl bg-[#FFF7ED] border border-[#F27A2E]/30 text-[#C25212] flex items-center justify-center shrink-0">
+                  <Icon name="Briefcase" className="w-4 h-4" />
+                </div>
+                <span className="text-base font-medium text-[#2B2B2B] leading-relaxed text-left sm:text-center">
+                  {photo.caption}
+                </span>
               </figcaption>
             </figure>
           </div>

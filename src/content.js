@@ -232,6 +232,7 @@ export const content = {
 
   // StudyRight Gallery - Meetings and recognition
   gallery: {
+    eyebrow: "Institutional Milestones",
     title: "Meetings and recognition",
     items: [
       {
@@ -255,19 +256,22 @@ export const content = {
 
   // Beneficiary video testimonials
   testimonialsSection: {
+    eyebrow: "Verified Beneficiary Stories",
     title: "What beneficiaries say about Toluwalase Tricycle Multibliz",
   },
   testimonials: [
     {
       id: "testimonial-1",
+      badge: "Beneficiary 01",
       videoSrc: "/media/testimonial-1.mp4",
       posterSrc: "/media/testimonial-1-poster.jpg",
-      width: 1280,
-      height: 720,
+      width: 720,
+      height: 1280,
       caption: "Beneficiary of Toluwalase Tricycle Multibliz service",
     },
     {
       id: "testimonial-2",
+      badge: "Beneficiary 02",
       videoSrc: "/media/testimonial-2.mp4",
       posterSrc: "/media/testimonial-2-poster.jpg",
       width: 720,
